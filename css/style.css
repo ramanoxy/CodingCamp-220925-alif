@@ -181,23 +181,38 @@ body {
         white-space: nowrap; /* Teks tetap dalam satu baris */
     }
 
-    /* Hero Section */
     .hero-section {
-        height: 350px;
+        min-height: 250px; /* Ganti height dengan min-height */
+        padding-top: 50px; /* Tambahkan padding agar ada ruang di atas */
+        padding-bottom: 50px; /* Tambahkan padding agar ada ruang di bawah */
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-content p {
         font-size: 1rem;
     }
-    
-    /* Our Headquarter Section */
+
+    /* Headquarter Section */
+    .headquarter-section {
+        margin-top: 20px; /* Pastikan ada jarak dari hero */
+    }
+
     .headquarter-container {
-        gap: 20px;
+
+        gap: 15px;
         align-items: center;
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .location-card p {
+        font-size: 14px;
     }
     
     /* Message Us Section */
@@ -210,6 +225,9 @@ body {
     .message-log {
         width: 100%;
         max-width: none;
+    }
+    h2 {
+        font-size: 24px;
     }
     
     /* Footer */
