@@ -169,7 +169,6 @@ body {
     font-size: 10px;
 }
 @media (max-width: 768px) {
-    /* Header & Navbar */
     .header {
         align-items: center;
         padding: 1rem 10px;
@@ -178,13 +177,13 @@ body {
     .navbar a {
         padding: 8px 10px;
         font-size: 14px;
-        white-space: nowrap; /* Teks tetap dalam satu baris */
+        white-space: nowrap;
     }
 
     .hero-section {
-        min-height: 250px; /* Ganti height dengan min-height */
-        padding-top: 50px; /* Tambahkan padding agar ada ruang di atas */
-        padding-bottom: 50px; /* Tambahkan padding agar ada ruang di bawah */
+        min-height: 250px; 
+        padding-top: 50px; 
+        padding-bottom: 50px; 
     }
 
     .hero-content h1 {
@@ -195,9 +194,8 @@ body {
         font-size: 1rem;
     }
 
-    /* Headquarter Section */
     .headquarter-section {
-        margin-top: 20px; /* Pastikan ada jarak dari hero */
+        margin-top: 20px;
     }
 
     .headquarter-container {
@@ -215,7 +213,6 @@ body {
         font-size: 14px;
     }
     
-    /* Message Us Section */
     .message-us-section {
         flex-direction: column;
         gap: 20px;
@@ -230,7 +227,6 @@ body {
         font-size: 24px;
     }
     
-    /* Footer */
     .footer {
         text-align: center;
     }
