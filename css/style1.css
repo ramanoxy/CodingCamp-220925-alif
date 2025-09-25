@@ -1,9 +1,12 @@
 body {
     font-family: 'altar';
+    background-color: #f4f4f4;
+    color: #333;
 }
 .header {
     background: #fff;
     color: #124170;
+    border-radius: 5px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -37,20 +40,18 @@ body {
 .hero-section {
     padding: 0;
     margin-bottom: 20px;
-     background-color: #fff;
+    background-color: #fff;
 }
 .profile-banner {
     background: #26667F;
     color: #fff;
     text-align: center;
-    padding: 60px 20px;
-    border-radius: 5px;
-    margin: 20px;
+    height: 578px;
+    position: relative;
 }
-
 .banner-photo {
     width: 100%;
-    height: 250px;
+    height: 350px;
     background: url('https://via.placeholder.com/1366x250.png?text=Our+Company+Banner') no-repeat center center/cover;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -58,7 +59,7 @@ body {
 
 .profile-content {
     background: #fff;
-    padding: 40px 20px;
+    padding: 20px;
     margin: 20px;
     border-radius: 5px;
 }
