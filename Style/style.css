@@ -1,0 +1,45 @@
+body {
+    font-family: 'alte';
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.header {
+    background: #fff;
+    color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+.navbar a {
+    background-color: aquamarine;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+
+    display: block;
+}
+.navbar a:hover {
+    background: #e7e7e7;
+    border-radius: 5px;
+}
+@font-face {
+    font-family: 'alte';
+    src: url('../Font/AlteHaasGroteskBold.ttf');
+}
