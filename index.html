@@ -49,6 +49,40 @@
         </div>
     </div>
 </section>
+<section class="message-us-section">
+    <h2>Message Us</h2>
+    <div class="message-us-container">
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Nama">
+            </div>
+            <div class="form-group">
+                <label for="birth-date">Tanggal Lahir:</label>
+                <input type="date" id="birth-date" name="birth-date">
+            </div>
+            <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="Laki-Laki">
+                    <label for="male">Laki-Laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <label for="female">Perempuan</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" placeholder="Tulis pesan anda disini..."></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="message-log">
+            <p class="current-time">Current Time: <span id="current-time"></span></p>
+            <div id="form-result"></div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
 </body>
