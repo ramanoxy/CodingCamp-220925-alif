@@ -170,19 +170,77 @@ body {
     font-size: 10px;
 }
 @media (max-width: 768px) {
-    .headquarter-container {
-        gap: 20px;
+    body {
+        font-size: 14px;
     }
-}
-@media (max-width: 768px) {
-    .hero-banner {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .hero-section {
         height: 300px;
     }
+
     .hero-content h1 {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
+
     .hero-content p {
         font-size: 1rem;
+    }
+    
+    .headquarter-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .location-card {
+        width: 100%;
+    }
+    
+    .message-us-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .profile-banner {
+        padding: 40px 10px;
+    }
+
+    .profile-content {
+        padding: 20px;
+    }
+    
+    .vision-mission-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .footer {
+        text-align: center;
     }
 }
 @font-face {
