@@ -1,35 +1,76 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const userName = prompt('Masukkan nama Anda:');
+    
+    const nameModal = document.getElementById('nameModal');
+    const modalNameInput = document.getElementById('modal-name-input');
+    const modalSubmitBtn = document.getElementById('modal-submit-btn');
     const userNameElement = document.getElementById('user-name');
-    if (userName) {
-        userNameElement.textContent = userName;
-    } else {
-        userNameElement.textContent = 'Guest';
-    }
-    const currentTimeElement = document.getElementById('current-time');
-    const now = new Date();
-    currentTimeElement.textContent = now.toLocaleString();
-    const contactForm = document.getElementById('contact-form');
-    const formResult = document.getElementById('form-result');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-    const name = document.getElementById('name').value;
-        const birthDate = document.getElementById('birth-date').value;
-        const gender = document.querySelector('input[name="gender"]:checked');
-        const message = document.getElementById('message').value;
-    if (!name || !birthDate || !gender || !message) {
-            alert('Mohon lengkapi semua data!');
-            return;
-        }
-    const genderValue = gender ? gender.value : 'Tidak diketahui';
-        const resultHTML = `
-            <p><strong>Nama:</strong> ${name}</p>
-            <p><strong>Tanggal Lahir:</strong> ${birthDate}</p>
-            <p><strong>Jenis Kelamin:</strong> ${genderValue}</p>
-            <p><strong>Pesan:</strong> ${message}</p>
-        `;
-    formResult.innerHTML = resultHTML;
 
-    contactForm.reset();
-    });
+    if (document.title.includes('Ramadev-CodingCamp RevoU') && nameModal) {
+        
+        nameModal.classList.add('show');
+
+        const processName = () => {
+            let userName = modalNameInput.value.trim();
+            
+            if (userName === '') {
+                userNameElement.textContent = 'Sobat Teknologi';
+            } else {
+                userNameElement.textContent = userName;
+            }
+            
+            nameModal.classList.remove('show'); 
+        };
+
+        modalSubmitBtn.addEventListener('click', processName);
+        
+
+        modalNameInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                processName();
+            }
+        });
+        
+        if (userNameElement) {
+             userNameElement.textContent = 'Sobat Teknologi';
+        }
+    }
+
+
+    const contactForm = document.getElementById('contact-form');
+    
+    const validationMessage = document.createElement('div');
+    validationMessage.style.color = 'red';
+    validationMessage.style.marginTop = '10px';
+    
+    if (contactForm) {
+        contactForm.parentNode.insertBefore(validationMessage, contactForm.nextSibling);
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const fullName = document.getElementById('full-name').value;
+            const emailAddress = document.getElementById('email-address').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+            const message = document.getElementById('message').value;
+            const interestedIn = document.getElementById('interested-in').value;
+
+            if (!fullName || !emailAddress || !phoneNumber || !message || !interestedIn) {
+                validationMessage.textContent = 'Mohon lengkapi semua data yang diperlukan.';
+                return;
+            }
+
+            validationMessage.textContent = '';
+            alert('Formulir berhasil dikirim! Kami akan menghubungi Anda 1x24 jam.');
+            
+            console.log('Data yang dikirim:', {
+                nama: fullName,
+                email: emailAddress,
+                telepon: phoneNumber,
+                pesan: message,
+                tertarik_pada: interestedIn
+            });
+
+            contactForm.reset();
+        });
+    }
 });

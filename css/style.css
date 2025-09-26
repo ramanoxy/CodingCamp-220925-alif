@@ -1,5 +1,7 @@
 body {
     font-family: 'alte';
+    position: relative;
+    overflow-x: hidden;
     background-color: #0B192C;
     color: #333;
 }
@@ -7,13 +9,79 @@ body {
     background: #1E3E62;
     color: #333;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px #000000(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
     position: relative;
     z-index: 10;
+}
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: none; 
+}
+
+.custom-modal.show {
+    opacity: 1;
+    visibility: visible;
+    display: flex; 
+}
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.custom-modal.show .modal-content {
+    transform: scale(1);
+}
+
+#modal-name-input {
+    padding: 10px;
+    width: 80%;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#modal-submit-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.hero-content input[type="text"] {
+    padding: 10px;
+    margin: 15px 0;
+    width: 80%; /* Atur lebar input */
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
 }
 .logo-text {
     text-decoration: none;
@@ -182,6 +250,7 @@ body {
 @media (max-width: 768px) {
 
     .header {
+        gap: 15px;
         align-items: center;
         padding: 10px;
     }
@@ -197,8 +266,58 @@ body {
         display: inline-block;
         border-radius: 0 !important;    
     }
+    .hero-section {
+        flex-direction: column; 
+        padding: 40px 20px; 
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 24px; 
+    }
+    
+    .message-us-container {
+        flex-direction: column;
+        gap: 30px;
+}
 }
 @font-face {
     font-family: 'alte';
     src: url('../Font/AlteHaasGroteskBold.ttf');
+}
+.header, .hero-section, .message-us-section, .about-company, .vision-mission {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.header {
+    animation-delay: 0s;
+}
+
+.hero-section {
+    animation-delay: 0.2s;
+}
+
+.message-us-section {
+    animation-delay: 0.4s;
+}
+
+.about-company {
+    animation-delay: 0.6s;
+}
+
+.vision-mission {
+    animation-delay: 0.8s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
