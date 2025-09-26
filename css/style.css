@@ -180,22 +180,23 @@ body {
     margin: 0;
 }
 @media (max-width: 768px) {
-.header {
-    align-items: center;
-    padding: 10px;
-}
-.navbar {
-    margin-top: 10px;
-    width: 100%;
-    overflow-x: auto;  
-    white-space: nowrap;
-    border: none;
-    padding-bottom: 5px; 
-}
-.nav-item {
-    display: inline-block;
-    border-radius: 0 !important;    
-}
+
+    .header {
+        align-items: center;
+        padding: 10px;
+    }
+    .navbar {
+        margin-top: 10px;
+        width: 100%;
+        overflow-x: auto;  
+        white-space: nowrap;
+        border: none;
+        padding-bottom: 5px; 
+    }
+    .nav-item {
+        display: inline-block;
+        border-radius: 0 !important;    
+    }
 }
 @font-face {
     font-family: 'alte';

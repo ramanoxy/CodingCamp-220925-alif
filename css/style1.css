@@ -120,47 +120,25 @@ body {
     margin: 0;
 }
 @media (max-width: 768px) {
+
     .header {
         align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px;
     }
-
-    .logo img {
-        height: 40px;
-    }
-
-    .navbar a {
-        padding: 6px 8px;
-        font-size: 14px;
+    .navbar {
+        margin-top: 10px;
+        width: 100%;
+        overflow-x: auto;  
         white-space: nowrap;
+        border: none;
+        padding-bottom: 5px; 
     }
-
-    .profile-banner {
-        padding: 20px;
-    }
-
-    .banner-photo {
-        height: 150px;
-    }
-
-    .profile-banner h1 {
-        font-size: 1.8rem;
-    }
-
-    .profile-content {
-        padding: 20px;
-    }
-    
-    .profile-content h2 {
-        font-size: 24px;
-    }
-
-    .vision-mission-container {
-        flex-direction: column;
-        gap: 15px;
+    .nav-item {
+        display: inline-block;
+        border-radius: 0 !important;    
     }
 }
+
 @font-face {
     font-family: 'altar';
     src: url('../Font/AlteHaasGroteskBold.ttf');
