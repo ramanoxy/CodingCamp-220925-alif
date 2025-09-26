@@ -1,96 +1,123 @@
 body {
     font-family: 'altar';
-    background-color: #f4f4f4;
+    background-color: #0B192C;
     color: #333;
 }
 .header {
-    background: #fff;
-    color: #124170;
-    border-radius: 5px;
-    padding: 10px;
+    background: #1E3E62;
+    color: #333;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px #000000(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
     position: relative;
     z-index: 10;
 }
-.logo {
-    display: flex;
-    align-items: center;
+.logo-text {
+    text-decoration: none;
+    color: #fff;
 }
-.logo-img {
-    height: 40px;
-    width: auto;
+.logo-text h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
 }
 .navbar {
     display: flex;
-    gap: 10px;
+    gap: 0px;
 }
-.navbar a {
-    background-color: #26667F;
-    color: #DDF4E7;
+.nav-item {
+    color: #fff;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-left: none;
     display: block;
 }
-.navbar a:hover {
-    background: #2c3e50;
-    border-radius: 5px;
+.nav-item:first-child {
+    border-left: 1px solid #fff;
+    border-radius: 5px 0 0 5px;
+}
+.nav-item:last-child {
+    border-radius: 0 5px 5px 0;
+}
+.nav-item:hover {
+    background: #FF6500;
 }
 .hero-section {
-    padding: 0;
-    margin-bottom: 20px;
-    background-color: #fff;
-}
-.profile-banner {
-    background: #26667F;
-    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 578px;
-    position: relative;
-}
-.banner-photo {
+    color: #fff;
+    min-height: 100px;
     width: 100%;
-    height: 350px;
-    background: url('https://via.placeholder.com/1366x250.png?text=Our+Company+Banner') no-repeat center center/cover;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
-.profile-content {
-    background: #fff;
+.hero-content {
     padding: 20px;
+}
+.hero-content h1 {
+    font-size: 30px;
+    margin: 0 0 10px 0;
+}
+.hero-content p {
+    font-size: 15px;
+}
+.vision-mission {
+    background: #1E3E62;
+    padding: 50px 20px;
     margin: 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.profile-content h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.vision-mission-container {
+.vm-container {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 40px;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
-.vision-mission-container .card {
+.vm-card {
+    color: #fff;
     flex: 1;
     min-width: 250px;
-    padding: 20px;
-    background: #f9f9f9;
-    border: 1px solid #eee;
+    text-align: center;
+}
+
+.vm-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.vm-card ul {
+    color: #0B192C;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.vm-card li {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
-.footer {
-    text-align: right;
-    padding: 20px;
-    background: #fff;
-    border-top: 1px solid #ccc;
-    color: #777; 
-    font-size: 10px;
+.simple-footer {
+    background-color: #fff;
+    color: #b7b7b7;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.simple-footer p {
+    margin: 0;
 }
 @media (max-width: 768px) {
     .header {

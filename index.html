@@ -10,75 +10,85 @@
 <body>
 <header class="header">
     <div class="logo">
-        <a href="index.html">
-            <img src="Gambar/Logo-New.png" alt="My Website Logo" class="logo-img">
+        <a href="index.html" class="logo-text">
+            <h1>RamaTech</h1>
         </a>
     </div>
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="profile.html">Our Profile</a>
-        <a href="#">Portfolio</a>
-        <a href="#Msg">Message Us</a>
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="profile.html" class="nav-item">Our Profile</a>
+        <a href="#Msg" class="nav-item">Contact Us</a>
     </nav>
 </header>
-<section class="hero-section">
-    <div class="hero-banner">
-        <div class="hero-content">
-            <h1 id="welcome-message">Hi <span id="user-name"></span>, Welcome to Website</h1>
-            <p>Selamat datang di ruang kreasiku. Senang kamu ada di sini!</p>
-        </div>
-    </div>
-</section>
-<section class="headquarter-section">
-    <h2>Our Headquarter</h2>
-    <div class="headquarter-container">
-        <div class="location-card">
-            <div class="circle jakarta"></div> <p>Jakarta</p>
-        </div>
-        <div class="location-card">
-            <div class="circle bandung"></div> <p>Bandung</p>
-        </div>
-        <div class="location-card">
-            <div class="circle surabaya"></div> <p>Surabaya</p>
-        </div>
-    </div>
-</section>
-<section class="message-us-section">
-    <h2 id="Msg">Message Us</h2>
-    <div class="message-us-container">
-        <form id="contact-form" class="contact-form">
-            <div class="form-group">
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" placeholder="Nama">
+<main>
+    <section class="hero-section">
+            <div class="hero-content">
+                <h1 id="welcome-message">
+                Hai <span id="user-name"></span>, Siap Berinovasi di Dunia Teknologi?
+                </h1>
+                <p>Kami hadir untuk mengubah ide menjadi solusi digital yang nyata dan berdampak.</p>
             </div>
-            <div class="form-group">
-                <label for="birth-date">Tanggal Lahir:</label>
-                <input type="date" id="birth-date" name="birth-date">
-            </div>
-            <div class="form-group">
-                <label>Jenis Kelamin:</label>
-                <div class="radio-group">
-                    <input type="radio" id="male" name="gender" value="Laki-Laki">
-                    <label for="male">Laki-Laki</label>
-                    <input type="radio" id="female" name="gender" value="Perempuan">
-                    <label for="female">Perempuan</label>
+    </section>
+    <section class="message-us-section">
+            <div class="message-us-container">
+                <div class="message-us-left">
+                    <div class="image-placeholder"></div>
+                    <div class="info-block">
+                        <p>Use this space to provide users with more information about your offer. Consider it a follow-up to your headline and explain the benefits of your service or product</p>
+                        <div class="benefit-list">
+                            <div class="benefit-item">
+                                <span class="number-circle">1</span>
+                                <p>Your first feature, written in the form of a benefit statement.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="number-circle">2</span>
+                                <p>Your second feature, written in the form of a benefit statement.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="number-circle">3</span>
+                                <p>Your third feature written, in the form of a benefit statement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-us-right">
+                    <h2>Contact Us</h2>
+                    <p>Tim kami akan menghubungi anda 1x24 jam setelah data kami terima.</p>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="full-name">Nama:</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Nama lengkap...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email-address">Email Address:</label>
+                            <input type="email" id="email-address" name="email-address" placeholder="example@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-number">Nomer Telepon:</label>
+                            <input type="tel" id="phone-number" name="phone-number" placeholder="+62 812...">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><P></P>Pesan:</label>
+                            <textarea id="message" name="message" placeholder="Tulis pesan Anda..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="interested-in">Apa yang kamu minati?</label>
+                            <select id="interested-in" name="interested-in">
+                                <option value="" disabled selected>Pilih</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Mobile App Development">Mobile App Development</option>
+                                <option value="Software Engineering">Software Engineering</option>
+                            </select>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="message">Pesan:</label>
-                <textarea id="message" name="message" placeholder="Tulis pesan anda disini..."></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-
-        <div class="message-log">
-            <p class="current-time">Current Time: <span id="current-time"></span></p>
-            <div id="form-result"></div>
-        </div>
-    </div>
-</section>
-<footer class="footer">
-    <p>Created By Ramadev</p>
+    </section>
+</main>
+<footer class="simple-footer">
+    <p>&copy; 2025 RamaTech. All Rights Reserved.</p>
 </footer>
 </body>
 </html>
